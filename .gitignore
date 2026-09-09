@@ -1,0 +1,15 @@
+# Operating-system files
+.DS_Store
+Thumbs.db
+
+# Editor-local settings
+.vscode/
+
+# Secrets and local configuration
+.env
+.env.local
+
+# Node dependencies and generated output (used later)
+node_modules/
+dist/
+.next/
