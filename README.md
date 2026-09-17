@@ -10,3 +10,28 @@ Be able to use Git without immediately assuming I've broken something every time
 Understand the difference between what's saved on my computer, what's committed in Git, and what's actually been pushed to GitHub without having to ask "BUT WHERE IS IT?"
 ### Weekly Schedule
 I don't have set study days because my schedule changes depending on work, kids, migraines and whatever else decides needs my attention. My goal is five 2hr blocks throughout the week, scheduled around everything else. 
+## Week 2 - Give the Web Meaning
+
+### Testing
+
+Navigation
+Home to About: Passed
+About to Home: Passed
+External Alaskan Malamute Club of Canada link: Passed
+Images loaded correctly: Passed
+
+Keyboard and Skip Link
+Home: I tabbed to "Skip to content" and pressed Enter. The next Tab moved directly to the Alaskan Malamute Club of Canada link inside the main content, skipping the navigation.
+About: "Skip to content" correctly targets the main content. There are no interactive elements inside the main section, so the next Tab cycles back to the first focusable link.
+
+### Structural Decisions
+
+I used <main id="main"> for the unique content on each page. This also gives the skip link a clear target so keyboard users can skip the navigation.
+
+I used <nav aria-label="Main"> for the links between Home and About so the purpose of those links is clear and they are grouped as the site's main navigation.
+
+I used one <h1> for the main topic of each page and <h2> for sections underneath it so the heading structure follows the content instead of using headings based on how I want the text to look.
+
+### Image Decisions
+
+Elsa's photo has descriptive alt text because the image is part of the content. The paw print uses alt="" because it is decorative and doesn't add information that needs to be announced by a screen reader.
