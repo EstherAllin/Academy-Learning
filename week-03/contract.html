@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Prototype</title>
+</head>
+<body>
+  <form>
+    <label for="email">Email address</label>
+    <input id="email" name="email" type="email"
+      autocomplete="email" required>
+
+    <label for="message">How can you help?</label>
+    <textarea id="message" name="message" minlength="10" required></textarea>
+
+    <fieldset>
+      <legend>Preferred session</legend>
+
+      <label>
+        <input type="radio" name="session" value="morning" required>
+        Morning
+      </label>
+
+      <label>
+        <input type="radio" name="session" value="afternoon">
+        Afternoon
+      </label>
+    </fieldset>
+    <label for="interest">Volunteer interest</label>
+
+    <select id="interest" name="interest">
+        <option value="">Choose an interest</option>
+        <option value="events">Events</option>
+        <option value="fundraising">Fundraising</option>
+        <option value="outreach">Community outreach</option>
+    </select>
+
+    <p>Practice form: information is not saved or sent to the organization.</p>
+    <button type="submit">Preview application</button>
+  </form>
+    <table>
+    <caption>Volunteer sessions</caption>
+    <thead>
+      <tr>
+        <th scope="col">Day</th>
+        <th scope="col">Time</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Saturday</th>
+        <td>9:00 AM</td>
+      </tr>
+      <tr>
+        <th scope="row">Sunday</th>
+        <td>2:00 PM</td>
+      </tr>
+      <tr>
+        <th scope="row">Wednesday</th>
+        <td>6:00 PM</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
