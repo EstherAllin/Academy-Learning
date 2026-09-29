@@ -35,3 +35,17 @@ I used one <h1> for the main topic of each page and <h2> for sections underneath
 ### Image Decisions
 
 Elsa's photo has descriptive alt text because the image is part of the content. The paw print uses alt="" because it is decorative and doesn't add information that needs to be announced by a screen reader.
+
+## Week 3 - Forms People Can Use
+
+### Lesson 2 Testing
+
+Empty form: Expected it to block submission. It did and asked me to fill out the required field. Pass.
+
+Bad email: Expected it to reject an invalid email. It did and told me the @ was missing. Pass.
+
+Keyboard: Expected to be able to use the form without a mouse. Tab moved through the different fields and controls. Pass.
+
+200% zoom: Expected everything to stay readable and usable. It did. Pass.
+
+All four checks passed. No defects found, so nothing needed fixing.
