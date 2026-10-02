@@ -48,3 +48,28 @@ All four checks passed. No defects found, so nothing needed fixing.
 Valid looking email: Expected the browser to accept it. It did and the form cleared/reloaded. Pass
 Schedule table: Expected the table to have a clear caption and headers for the rows and columns. It does. Pass
 Browser validation only checks the form input. It doeds not prove anything was sent or delivered. There is no backend receiving, validating or sending the information.
+
+## Week 4 Deployment Testing
+
+Hosted commit: 2558e86
+
+Live URL: https://estherallin.github.io/Academy-Learning/
+
+- Home page: Opened in a private browser. Pass.
+- Care page: Opened and navigation worked. Pass.
+- About page: Opened and navigation worked. Pass.
+- Image: Elsa's image loaded correctly. Pass.
+- Keyboard: Navigation worked using the keyboard. Pass.
+- Narrow screen: Content remained readable and navigation worked. Pass.
+
+### Issue found and fixed
+
+The Care page initially returned "Cannot GET /care.html".
+
+Expected: The Care page would open.
+Observed: The page could not be found.
+Cause: care.html was inside the clinic folder instead of the project root.
+Fix: Moved care.html to the project root.
+Retest: Repeated the same Care link check. The page opened correctly. Pass.
+
+No known limitations after retesting.
