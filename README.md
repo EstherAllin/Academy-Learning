@@ -49,6 +49,14 @@ Valid looking email: Expected the browser to accept it. It did and the form clea
 Schedule table: Expected the table to have a clear caption and headers for the rows and columns. It does. Pass
 Browser validation only checks the form input. It doeds not prove anything was sent or delivered. There is no backend receiving, validating or sending the information.
 
+## Setup and Deployment
+
+To view the site locally, open the project folder and launch index.html with Live Server.
+
+The site is deployed with GitHub Pages from the main branch and the repository root.
+
+Tested deployment commit: 2558e86
+
 ## Week 4 Deployment Testing
 
 Hosted commit: 2558e86
