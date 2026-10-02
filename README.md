@@ -41,11 +41,10 @@ Elsa's photo has descriptive alt text because the image is part of the content. 
 ### Lesson 2 Testing
 
 Empty form: Expected it to block submission. It did and asked me to fill out the required field. Pass.
-
 Bad email: Expected it to reject an invalid email. It did and told me the @ was missing. Pass.
-
 Keyboard: Expected to be able to use the form without a mouse. Tab moved through the different fields and controls. Pass.
-
 200% zoom: Expected everything to stay readable and usable. It did. Pass.
-
 All four checks passed. No defects found, so nothing needed fixing.
+Valid looking email: Expected the browser to accept it. It did and the form cleared/reloaded. Pass
+Schedule table: Expected the table to have a clear caption and headers for the rows and columns. It does. Pass
+Browser validation only checks the form input. It doeds not prove anything was sent or delivered. There is no backend receiving, validating or sending the information.
