@@ -1,0 +1,47 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+.notice {
+    width: 300px;
+    max-width: 100%;
+    padding: 20px;
+    border: 1px solid black;
+    color: red;
+    overflow-wrap: anywhere;
+}p {
+    color: blue;
+}
+.notice.is-urgent {
+    color: darkred;
+    background-color: #ffe6e6;
+    border-color: darkred;
+}
+.notice.is-info {
+    color: #164b7a;
+    background-color: #e6f2ff;
+    border-color: #164b7a;
+}
+.notice.is-success {
+    color: #256029;
+    background-color: #e8f5e9;
+    border-color: #256029;
+}
+.notice.is-error {
+    color: #8b1e1e;
+    background-color: #ffe6e6;
+    border-color: #8b1e1e;
+}
+.notice.is-urgent {
+    color: darkred;
+    background-color: #ffe6e6;
+    border-color: darkred;
+}.notice-section {
+    width: 350px;
+    max-width: 100%;
+}
+.notice-container {
+    width: 250px;
+    max-width: 100%;
+}
