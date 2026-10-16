@@ -128,3 +128,27 @@ form select {
     padding: var(--space-small);
     max-width: 100%;
 }
+.toolbar {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+    }
+
+.toolbar__title {
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.actions {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    min-width: 0;
+}
+
+.actions a {
+    white-space: normal;
+    overflow-wrap: anywhere;
+}
