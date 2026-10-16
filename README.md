@@ -81,3 +81,42 @@ Fix: Moved care.html to the project root.
 Retest: Repeated the same Care link check. The page opened correctly. Pass.
 
 No known limitations after retesting.
+
+## Week 5 - CSS With Intention
+
+### Box Model Testing
+
+Used Chrome DevTools to look at the main container and see how much space everything was actually taking up.
+
+- Content width: 512px
+- Padding: 24px on each side
+- Border: 0px
+- Total width: 512 + 24 + 24 = 560px
+
+Because I'm using `box-sizing: border-box`, the padding is included in the total width instead of making the container bigger.
+
+Pass. The math actually matched. 😂
+
+### Cascade Testing
+
+Added a temporary `nav a` rule to make the navigation links purple.
+
+Expected: The links would turn purple because `nav a` is more specific than just `a`.
+
+What happened: They turned purple. Shocking, I know. 😂
+
+Removed the test rule, refreshed the page, and everything went back to teal.
+
+Pass. Nothing broke, and I didn't accidentally leave purple links everywhere.
+### Long Text and Zoom Testing
+
+Tested the Care page at 320px wide to make sure the longer text didn't get cut off. Everything wrapped properly and stayed readable. Pass.
+
+Tested again at 200% zoom. Text was still readable, nothing got cut off, and navigation worked. Pass.
+
+No issues with either test, so nothing needed fixing. For once. 😂
+### Keyboard Focus Testing
+
+Used Tab to move through the links on the Care page. The teal outline appeared so I could see which link was selected. Pass.
+
+No issues, nothing to fix.
