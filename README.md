@@ -120,3 +120,12 @@ No issues with either test, so nothing needed fixing. For once. 😂
 Used Tab to move through the links on the Care page. The teal outline appeared so I could see which link was selected. Pass.
 
 No issues, nothing to fix.
+### Live Website Testing
+
+Pushed commit `1ae33a8` to GitHub and opened the live site in an Incognito window.
+
+Checked Home, About, and Care. All three pages loaded properly, the styling worked, and I could navigate between them. Pass.
+
+Live site: https://estherallin.github.io/Academy-Learning/
+
+Nothing broke. I'll take it. 😂
