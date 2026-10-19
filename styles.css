@@ -133,7 +133,7 @@ form select {
     gap: 1rem;
     align-items: center;
     flex-wrap: wrap;
-    }
+}
 
 .toolbar__title {
     flex: 1 1 auto;
@@ -151,4 +151,43 @@ form select {
 .actions a {
     white-space: normal;
     overflow-wrap: anywhere;
+}
+.layout {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr;
+}
+
+.layout > *,
+.gallery > * {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+pre {
+    max-width: 100%;
+    overflow: auto;
+}
+
+@media (min-width: 52rem) {
+    .layout {
+        grid-template-columns: 14rem minmax(0, 1fr);
+    }
+}
+
+.gallery {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+}
+.card {
+    border: 1px solid var(--color-accent);
+    border-radius: 0.5rem;
+    padding: var(--space-medium);
+    margin: 0;
 }
