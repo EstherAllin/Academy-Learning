@@ -129,3 +129,25 @@ Checked Home, About, and Care. All three pages loaded properly, the styling work
 Live site: https://estherallin.github.io/Academy-Learning/
 
 Nothing broke. I'll take it. 😂
+## Week 6 - Layouts That Flex
+
+### What I Did
+
+Used Flexbox for the navigation and Grid for the resource cards so everything adjusts to different screen sizes.
+
+Set the breakpoint at `52rem` because squeezing everything side by side on smaller screens wasn't going to work.
+
+### Testing
+
+- 320px: Everything fit. Pass.
+- 768px: Layout stacked properly. Pass.
+- Wide screen: Sidebar and cards displayed correctly. Pass.
+- Long title and URL: Both wrapped without breaking anything. Pass.
+- Removed a card: The others adjusted. Pass.
+- 200% zoom: Everything stayed readable. Pass.
+
+### Issues
+
+None! The CSS handled everything without needing fixes. I restored the original cards after testing.
+
+Nothing broke. I'm almost suspicious. 😂
