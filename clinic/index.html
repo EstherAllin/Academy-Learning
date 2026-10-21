@@ -3,11 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Elsa's Home Page</title>
+    <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
     <h1>Elsa's Home Page</h1>
 <p>Apparently Elsa has a website now. This seems unnecessary. She's already got main character energy.</p>
 <a href="pages/about.html">About Elsa</a>
+<main>
+    <h2>Week 7: Button Components</h2>
+
+    <button type="button" class="button button--primary">
+        Primary Button
+    </button>
+
+    <button type="button" class="button">
+        Secondary Button
+    </button>
+
+    <button type="button" class="button" disabled>
+         Disabled Button
+    </button>
+        <p>This button is unavailable because this feature is not ready yet.</p>
+
+    <button type="button" class="button button--primary">
+          This Is a Very Long Button Label to Test How Text Wraps
+    </button>
+
+    <h2>Accessible Form Error</h2>
+
+    <label for="sample-email">Email address</label>
+
+    <input
+         type="email"
+        id="sample-email"
+        class="field"
+        value="learner@example.com"
+>
+    <h2>Native Email Validation</h2>
+
+    <form action="#" method="get">
+        <label for="test-email">Email address</label>
+
+        <input
+             type="email"
+             id="test-email"
+             name="email"
+             required
+             >
+
+        <button type="submit" class="button button--primary">
+            Test Email
+        </button>
+    </form>
+</main>
 </body>
 </html>

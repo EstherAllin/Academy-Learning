@@ -2,6 +2,10 @@
     --color-text: #183235;
     --color-background: #ffffff;
     --color-accent: #08656b;
+    --color-surface: var(--color-background);
+    --color-action: var(--color-accent);
+    --color-on-action: #ffffff;
+    --color-focus: var(--color-accent);
 
     --color-info: #164b7a;
     --color-info-bg: #e6f2ff;
@@ -91,6 +95,7 @@ p {
     --color-text: #f1f5f5;
     --color-background: #182426;
     --color-accent: #80d8dc;
+    --color-on-action: #183235;
     --color-info: #b9dcff;
     --color-info-bg: #18354d;
     --color-success: #bce8c0;
@@ -190,4 +195,49 @@ pre {
     border-radius: 0.5rem;
     padding: var(--space-medium);
     margin: 0;
+}
+.card + .button {
+    margin-top: var(--space-medium);
+}
+.button {
+    --button-bg: var(--color-surface);
+    --button-text: var(--color-text);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    min-height: 2.75rem;
+    padding: .65rem 1rem;
+    border: 1px solid currentColor;
+    border-radius: .4rem;
+    background: var(--button-bg);
+    color: var(--button-text);
+    font: inherit;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    cursor: pointer;
+}
+.button--primary {
+    --button-bg: var(--color-action);
+    --button-text: var(--color-on-action);
+}
+.button:hover:not(:disabled) {
+    text-decoration: underline;
+}
+
+.button:focus-visible {
+    outline: 3px solid var(--color-focus);
+    outline-offset: 3px;
+}
+
+.button:disabled {
+    cursor: not-allowed;
+}
+.field[aria-invalid="true"] {
+    border: 2px solid var(--color-error);
+}
+
+.field-error {
+    color: var(--color-error);
+    font-weight: 600;
 }
