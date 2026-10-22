@@ -151,3 +151,32 @@ Set the breakpoint at `52rem` because squeezing everything side by side on small
 None! The CSS handled everything without needing fixes. I restored the original cards after testing.
 
 Nothing broke. I'm almost suspicious. 😂
+
+
+## Week 7 - Lesson 2: Motion and Quality Checks
+
+### Manual Accessibility Tests
+
+- Keyboard navigation: PASS. Tab reached interactive controls and skipped the disabled button.
+- Visible focus: PASS. Focus outlines were visible.
+- Heading order: PASS. One H1 followed by correctly ordered H2 headings.
+- 200% zoom: PASS. Content remained readable and usable.
+- Form validation: PASS. Empty and invalid email addresses were rejected.
+
+### Additional Tests
+
+- Forced colors: PASS. Buttons, borders, and focus outlines remained visible.
+- Reduced motion: Tested the browser setting, but button movement could not be conclusively verified.
+
+### Automated Accessibility Scan
+
+Tool: Chrome DevTools Lighthouse
+Category: Accessibility
+Pages: Local Live Server and deployed GitHub Pages
+Score: 100/100 on both
+Findings: No automated accessibility issues detected.
+
+### Limitations
+
+A perfect Lighthouse score does not guarantee full accessibility. Manual testing is still required.
+No confirmed defects required repairs.
