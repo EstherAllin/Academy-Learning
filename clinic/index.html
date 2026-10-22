@@ -29,17 +29,42 @@
     <button type="button" class="button button--primary">
           This Is a Very Long Button Label to Test How Text Wraps
     </button>
+   
+    <h2>Additional Button States</h2>
 
+    <button type="button" class="button" disabled>
+    Sending...
+    </button>
+    <p>Pending: Please wait while your request is processed.</p>
+
+    <p class="notice is-success" role="status">
+    Success: Your request was completed.
+    </p>
+
+    <p class="notice is-error" role="alert">
+    Error: Your request could not be completed.
+    Please try again.
+    </p>
+
+   
     <h2>Accessible Form Error</h2>
 
-    <label for="sample-email">Email address</label>
+        <label for="sample-email">Email address</label>
 
     <input
          type="email"
         id="sample-email"
         class="field"
-        value="learner@example.com"
->
+        value="invalid-email"
+        aria-invalid="true"
+        aria-describedby="sample-email-error"
+        >
+
+    <p id="sample-email-error" class="field-error">
+    Please enter a valid email address, such as
+    name@example.com.
+    </p>
+
     <h2>Native Email Validation</h2>
 
     <form action="#" method="get">
