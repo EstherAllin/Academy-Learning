@@ -180,3 +180,229 @@ Findings: No automated accessibility issues detected.
 
 A perfect Lighthouse score does not guarantee full accessibility. Manual testing is still required.
 No confirmed defects required repairs.
+
+## Week 8 - Interface Craft: A Brief Becomes a Plan
+
+### Client Brief
+
+Project: Alaskan Malamute informational website featuring Elsa.
+
+Visitor: Someone interested in learning about Alaskan Malamutes and their care.
+
+Goal: Learn about the breed, meet Elsa, and find useful information about caring for an Alaskan Malamute.
+
+Required pages:
+- Home
+- About
+- Care
+
+### Acceptance Criteria
+
+1. Home, About, and Care pages load correctly and have clear headings.
+
+2. Navigation links work on all three pages and take visitors to the correct destination.
+
+3. All navigation links can be reached using the Tab key, with visible focus indicators.
+
+4. All three pages remain readable and usable at 320px screen width without horizontal scrolling.
+
+5. Visitors can find information about Elsa, Alaskan Malamutes, and their care.
+
+### Planned GitHub Issues
+
+1. Review and improve the three-page website structure and navigation.
+
+2. Review responsive and accessible styling using existing CSS.
+
+3. Test the website and document release readiness.
+
+### Optional Features - Not in Scope
+
+- Photo galleries beyond existing images
+- Interactive breed quizzes
+- Animations and visual effects
+- User accounts
+- Additional pages
+
+The priority is a functional, accessible, responsive informational website.
+
+### Time Budget - 240 Minutes
+
+- Planning and reviewing requirements: 35 minutes
+- Website improvements: 105 minutes
+- Testing and fixing issues: 65 minutes
+- Documentation and release preparation: 35 minutes
+
+Total: 240 minutes (4 hours)
+
+If something takes longer than expected, I'll reduce optional features rather than rush testing or exceed the time budget.
+
+### Lesson 1 - Testing Results
+
+Navigation:
+- Home, About, and Care links opened the correct pages. PASS.
+
+Keyboard Accessibility:
+- Tab navigation worked across the website. PASS.
+- Keyboard focus was visible. PASS.
+- Pages could be opened using the keyboard. PASS.
+
+Responsive Testing - 320px:
+- Home: Readable, no cut-off content or horizontal scrolling. PASS.
+- About: Readable, no cut-off content or horizontal scrolling. PASS.
+- Care: Readable, no cut-off content or horizontal scrolling. PASS.
+
+### Improvements
+
+Added aria-current="page" to the Home and About navigation links.
+The Care page already had this attribute.
+
+Reused existing CSS from Weeks 5-7.
+No new CSS was necessary.
+
+No defects were identified during these checks.
+
+### Lesson 2 - Image Optimization
+
+Image: Elsa's photo on the About page.
+
+Original:
+- File: images/Elsa.png
+- Dimensions: 1256 x 1452 pixels
+- File size: approximately 570 KB
+- Browser transfer: approximately 359 KB
+
+Optimized:
+- File: images/Elsa-640.jpg
+- Dimensions: 640 x 605 pixels
+- File size: approximately 42.8 KB
+- Browser transfer: approximately 42.8 KB
+
+Results:
+- Browser transfer reduced by approximately 88%.
+- Image remained clear at its displayed size.
+- Image displayed correctly on the About page.
+- Original image preserved for comparison.
+
+Testing conditions:
+- Chrome DevTools Network panel
+- Cache disabled
+- No network throttling
+- Same page and responsive viewport
+- Both versions loaded successfully
+
+Result: PASS
+
+### Lesson 2 - Responsive and Zoom Testing
+
+Page tested: About
+
+- 320px viewport: PASS
+- 768px viewport: PASS
+- 1280px viewport: PASS
+- 200% browser zoom: PASS
+
+Observed results:
+- Text remained readable.
+- Images displayed correctly.
+- Navigation remained usable.
+- No horizontal scrolling or cut-off content observed.
+
+Result: PASS
+
+### Lesson 2 - Lighthouse Audit
+
+Page: About
+Environment: Chrome DevTools, local Live Server
+Device: Mobile
+
+Results:
+- Performance: 100/100
+- Accessibility: 100/100
+
+Result: PASS
+
+Note: These scores reflect this local audit, not a production deployment.
+
+### Lesson 2 - Console Check
+
+Page: About
+Browser: Chrome
+Action: Reloaded page with DevTools Console open
+
+Expected: No loading errors or missing resources.
+Observed: No red error messages.
+
+Result: PASS
+
+Note: Navigation links were tested separately in Lesson 1.
+
+### Lesson 3 - Website Self-Check
+
+Review type: Self-check
+Peer review: Pending
+
+Site: https://estherallin.github.io/Academy-Learning/
+Published branch: main
+
+Main visitor task:
+Navigate Home, About, and Care to learn about Elsa
+and Alaskan Malamutes.
+
+Expected:
+All three pages open and display their content correctly.
+
+Observed:
+All three published pages loaded successfully.
+Navigation worked as expected.
+
+Result: PASS
+
+Known limitation:
+The published site uses main and does not yet include
+the latest Week 8 changes from feat/week8-interface-craft.
+
+### Week 8 - Release Handoff
+
+Project: Life With a Malamute
+
+Live site:
+https://estherallin.github.io/Academy-Learning/
+
+Source repository:
+https://github.com/EstherAllin/Academy-Learning
+
+Week 8 branch:
+feat/week8-interface-craft
+
+Latest tested Week 8 commit:
+1981ec5
+
+Main visitor task:
+Explore the Home, About, and Care pages to learn
+about Elsa and Alaskan Malamute care.
+
+Testing evidence:
+- Navigation: PASS
+- Keyboard navigation and visible focus: PASS
+- Responsive widths (320px, 768px, 1280px): PASS
+- Browser zoom (200%): PASS
+- Lighthouse mobile performance: 100
+- Lighthouse mobile accessibility: 100
+- Console check: PASS
+
+Image optimization:
+- Original browser transfer: approximately 359 KB
+- Optimized browser transfer: approximately 42.8 KB
+- Reduction: approximately 88%
+- Visual quality: PASS
+
+Known limitations:
+- The published site currently uses main.
+- Week 8 improvements are on a separate branch.
+- Lighthouse results were collected locally.
+- Peer review is pending; self-check completed.
+
+Next action:
+Confirm the final Week 8 assignment requirements,
+publish the approved version, and verify the live site.
