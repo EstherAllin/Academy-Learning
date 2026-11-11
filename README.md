@@ -336,3 +336,73 @@ Observed: No red error messages.
 Result: PASS
 
 Note: Navigation links were tested separately in Lesson 1.
+
+### Lesson 3 - Website Self-Check
+
+Review type: Self-check
+Peer review: Pending
+
+Site: https://estherallin.github.io/Academy-Learning/
+Published branch: main
+
+Main visitor task:
+Navigate Home, About, and Care to learn about Elsa
+and Alaskan Malamutes.
+
+Expected:
+All three pages open and display their content correctly.
+
+Observed:
+All three published pages loaded successfully.
+Navigation worked as expected.
+
+Result: PASS
+
+Known limitation:
+The published site uses main and does not yet include
+the latest Week 8 changes from feat/week8-interface-craft.
+
+### Week 8 - Release Handoff
+
+Project: Life With a Malamute
+
+Live site:
+https://estherallin.github.io/Academy-Learning/
+
+Source repository:
+https://github.com/EstherAllin/Academy-Learning
+
+Week 8 branch:
+feat/week8-interface-craft
+
+Latest tested Week 8 commit:
+1981ec5
+
+Main visitor task:
+Explore the Home, About, and Care pages to learn
+about Elsa and Alaskan Malamute care.
+
+Testing evidence:
+- Navigation: PASS
+- Keyboard navigation and visible focus: PASS
+- Responsive widths (320px, 768px, 1280px): PASS
+- Browser zoom (200%): PASS
+- Lighthouse mobile performance: 100
+- Lighthouse mobile accessibility: 100
+- Console check: PASS
+
+Image optimization:
+- Original browser transfer: approximately 359 KB
+- Optimized browser transfer: approximately 42.8 KB
+- Reduction: approximately 88%
+- Visual quality: PASS
+
+Known limitations:
+- The published site currently uses main.
+- Week 8 improvements are on a separate branch.
+- Lighthouse results were collected locally.
+- Peer review is pending; self-check completed.
+
+Next action:
+Confirm the final Week 8 assignment requirements,
+publish the approved version, and verify the live site.
