@@ -406,3 +406,10 @@ Known limitations:
 Next action:
 Confirm the final Week 8 assignment requirements,
 publish the approved version, and verify the live site.
+
+Deployment status:
+- Week 8 changes merged into main.
+- GitHub Pages updated successfully.
+- Live About page checked after deployment.
+- Optimized Elsa image displays correctly.
+- Peer review pending; self-check completed.
