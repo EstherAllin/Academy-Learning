@@ -208,13 +208,11 @@ Required pages:
 
 5. Visitors can find information about Elsa, Alaskan Malamutes, and their care.
 
-### Planned GitHub Issues
+### GitHub Issues
 
-1. Review and improve the three-page website structure and navigation.
-
-2. Review responsive and accessible styling using existing CSS.
-
-3. Test the website and document release readiness.
+1. [Issue #7 - Website structure and navigation](https://github.com/EstherAllin/Academy-Learning/issues/7)
+2. [Issue #6 - Responsive and accessible styling](https://github.com/EstherAllin/Academy-Learning/issues/6)
+3. [Issue #5 - Website testing and release handoff](https://github.com/EstherAllin/Academy-Learning/issues/5)
 
 ### Optional Features - Not in Scope
 
@@ -358,10 +356,6 @@ Navigation worked as expected.
 
 Result: PASS
 
-Known limitation:
-The published site uses main and does not yet include
-the latest Week 8 changes from feat/week8-interface-craft.
-
 ### Week 8 - Release Handoff
 
 Project: Life With a Malamute
@@ -372,11 +366,7 @@ https://estherallin.github.io/Academy-Learning/
 Source repository:
 https://github.com/EstherAllin/Academy-Learning
 
-Week 8 branch:
-feat/week8-interface-craft
-
-Latest tested Week 8 commit:
-1981ec5
+Final deployed commit: 9bd0e4c
 
 Main visitor task:
 Explore the Home, About, and Care pages to learn
@@ -399,13 +389,8 @@ Image optimization:
 
 Known limitations:
 - The published site currently uses main.
-- Week 8 improvements are on a separate branch.
 - Lighthouse results were collected locally.
 - Peer review is pending; self-check completed.
-
-Next action:
-Confirm the final Week 8 assignment requirements,
-publish the approved version, and verify the live site.
 
 Deployment status:
 - Week 8 changes merged into main.
