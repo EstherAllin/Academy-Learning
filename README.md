@@ -182,56 +182,82 @@ A perfect Lighthouse score does not guarantee full accessibility. Manual testing
 No confirmed defects required repairs.
 
 ## Week 8 - Interface Craft: A Brief Becomes a Plan
+
 ### Client Brief
 
-Business: Fictional local repair service.
+Project: Alaskan Malamute informational website featuring Elsa.
 
-Visitor: Someone looking for a local repair company.
+Visitor: Someone interested in learning about Alaskan Malamutes and their care.
 
-Goal: Find out what services are available, check business hours, and figure out how to contact the business.
+Goal: Learn about the breed, meet Elsa, and find useful information about caring for an Alaskan Malamute.
 
 Required pages:
 - Home
-- Services
-- Contact
+- About
+- Care
 
-Not included:
-- Online payments
-- Online booking system
-- Customer accounts
 ### Acceptance Criteria
 
-1. Home, Services, and Contact pages load correctly and have clear headings.
+1. Home, About, and Care pages load correctly and have clear headings.
 
 2. Navigation links work on all three pages and take visitors to the correct destination.
 
-3. All navigation and contact links can be reached using the Tab key, with visible focus indicators.
+3. All navigation links can be reached using the Tab key, with visible focus indicators.
 
 4. All three pages remain readable and usable at 320px screen width without horizontal scrolling.
 
-5. The Contact page displays business hours and a working email link.
+5. Visitors can find information about Elsa, Alaskan Malamutes, and their care.
+
+### Planned GitHub Issues
+
+1. Review and improve the three-page website structure and navigation.
+
+2. Review responsive and accessible styling using existing CSS.
+
+3. Test the website and document release readiness.
 
 ### Optional Features - Not in Scope
 
-- Online appointment booking
-- Customer accounts
-- Online payments
-- Animations and fancy visual effects
-- Customer reviews or testimonials
+- Photo galleries beyond existing images
+- Interactive breed quizzes
+- Animations and visual effects
+- User accounts
+- Additional pages
 
-These features aren't required for the three-page website.
-
-The priority is making sure visitors can find services, check business hours, and contact the business.
-
-If time runs short, optional features stay out. The required functionality comes first.
+The priority is a functional, accessible, responsive informational website.
 
 ### Time Budget - 240 Minutes
 
 - Planning and reviewing requirements: 35 minutes
-- Building the three pages: 105 minutes
+- Website improvements: 105 minutes
 - Testing and fixing issues: 65 minutes
 - Documentation and release preparation: 35 minutes
 
 Total: 240 minutes (4 hours)
 
 If something takes longer than expected, I'll reduce optional features rather than rush testing or exceed the time budget.
+
+### Lesson 1 - Testing Results
+
+Navigation:
+- Home, About, and Care links opened the correct pages. PASS.
+
+Keyboard Accessibility:
+- Tab navigation worked across the website. PASS.
+- Keyboard focus was visible. PASS.
+- Pages could be opened using the keyboard. PASS.
+
+Responsive Testing - 320px:
+- Home: Readable, no cut-off content or horizontal scrolling. PASS.
+- About: Readable, no cut-off content or horizontal scrolling. PASS.
+- Care: Readable, no cut-off content or horizontal scrolling. PASS.
+
+### Improvements
+
+Added aria-current="page" to the Home and About navigation links.
+The Care page already had this attribute.
+
+Reused existing CSS from Weeks 5-7.
+No new CSS was necessary.
+
+No defects were identified during these checks.
