@@ -180,3 +180,58 @@ Findings: No automated accessibility issues detected.
 
 A perfect Lighthouse score does not guarantee full accessibility. Manual testing is still required.
 No confirmed defects required repairs.
+
+## Week 8 - Interface Craft: A Brief Becomes a Plan
+### Client Brief
+
+Business: Fictional local repair service.
+
+Visitor: Someone looking for a local repair company.
+
+Goal: Find out what services are available, check business hours, and figure out how to contact the business.
+
+Required pages:
+- Home
+- Services
+- Contact
+
+Not included:
+- Online payments
+- Online booking system
+- Customer accounts
+### Acceptance Criteria
+
+1. Home, Services, and Contact pages load correctly and have clear headings.
+
+2. Navigation links work on all three pages and take visitors to the correct destination.
+
+3. All navigation and contact links can be reached using the Tab key, with visible focus indicators.
+
+4. All three pages remain readable and usable at 320px screen width without horizontal scrolling.
+
+5. The Contact page displays business hours and a working email link.
+
+### Optional Features - Not in Scope
+
+- Online appointment booking
+- Customer accounts
+- Online payments
+- Animations and fancy visual effects
+- Customer reviews or testimonials
+
+These features aren't required for the three-page website.
+
+The priority is making sure visitors can find services, check business hours, and contact the business.
+
+If time runs short, optional features stay out. The required functionality comes first.
+
+### Time Budget - 240 Minutes
+
+- Planning and reviewing requirements: 35 minutes
+- Building the three pages: 105 minutes
+- Testing and fixing issues: 65 minutes
+- Documentation and release preparation: 35 minutes
+
+Total: 240 minutes (4 hours)
+
+If something takes longer than expected, I'll reduce optional features rather than rush testing or exceed the time budget.
