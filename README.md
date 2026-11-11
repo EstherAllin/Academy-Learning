@@ -261,3 +261,78 @@ Reused existing CSS from Weeks 5-7.
 No new CSS was necessary.
 
 No defects were identified during these checks.
+
+### Lesson 2 - Image Optimization
+
+Image: Elsa's photo on the About page.
+
+Original:
+- File: images/Elsa.png
+- Dimensions: 1256 x 1452 pixels
+- File size: approximately 570 KB
+- Browser transfer: approximately 359 KB
+
+Optimized:
+- File: images/Elsa-640.jpg
+- Dimensions: 640 x 605 pixels
+- File size: approximately 42.8 KB
+- Browser transfer: approximately 42.8 KB
+
+Results:
+- Browser transfer reduced by approximately 88%.
+- Image remained clear at its displayed size.
+- Image displayed correctly on the About page.
+- Original image preserved for comparison.
+
+Testing conditions:
+- Chrome DevTools Network panel
+- Cache disabled
+- No network throttling
+- Same page and responsive viewport
+- Both versions loaded successfully
+
+Result: PASS
+
+### Lesson 2 - Responsive and Zoom Testing
+
+Page tested: About
+
+- 320px viewport: PASS
+- 768px viewport: PASS
+- 1280px viewport: PASS
+- 200% browser zoom: PASS
+
+Observed results:
+- Text remained readable.
+- Images displayed correctly.
+- Navigation remained usable.
+- No horizontal scrolling or cut-off content observed.
+
+Result: PASS
+
+### Lesson 2 - Lighthouse Audit
+
+Page: About
+Environment: Chrome DevTools, local Live Server
+Device: Mobile
+
+Results:
+- Performance: 100/100
+- Accessibility: 100/100
+
+Result: PASS
+
+Note: These scores reflect this local audit, not a production deployment.
+
+### Lesson 2 - Console Check
+
+Page: About
+Browser: Chrome
+Action: Reloaded page with DevTools Console open
+
+Expected: No loading errors or missing resources.
+Observed: No red error messages.
+
+Result: PASS
+
+Note: Navigation links were tested separately in Lesson 1.
