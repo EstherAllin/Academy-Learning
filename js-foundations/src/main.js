@@ -112,3 +112,19 @@ console.log(false || false); // false
 console.log(false || true);  // true
 console.log(true || false);  // true
 console.log(true || true);   // true
+
+// Week 9 - Lesson 3: Trace before you run
+
+const raw = '2';
+const ticketQuantity = Number(raw);
+
+const validTicketQuantity =
+  raw.trim() !== '' &&
+  Number.isInteger(ticketQuantity) &&
+  ticketQuantity > 0;
+
+console.log(
+  validTicketQuantity
+    ? ticketQuantity * 12
+    : 'Enter a positive whole number'
+);
