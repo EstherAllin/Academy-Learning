@@ -359,3 +359,59 @@ console.log(
   'Original unchanged:',
   debugTasks[1].done === false
 );
+
+// Week 10 - Application Clinic: Immutable updates
+
+const clinicTasks = [
+  { id: 'a', title: 'Feed Elsa', complete: false },
+  { id: 'b', title: 'Walk Elsa', complete: false }
+];
+
+function completeClinicTask(tasks, id) {
+  return tasks.map(task =>
+    task.id === id
+      ? { ...task, complete: true }
+      : task
+  );
+}
+
+const clinicUpdated = completeClinicTask(clinicTasks, 'a');
+
+console.log('Original:', clinicTasks);
+console.log('Updated:', clinicUpdated);
+
+// Verify original data was not changed
+console.assert(
+  clinicTasks[0].complete === false,
+  'FAIL: Original task was modified'
+);
+
+// Verify the matching task was completed
+console.assert(
+  clinicUpdated[0].complete === true,
+  'FAIL: Updated task was not completed'
+);
+
+// Verify the ID stayed the same
+console.assert(
+  clinicUpdated[0].id === 'a',
+  'FAIL: Task ID changed'
+);
+
+// Missing ID
+const clinicMissing = completeClinicTask(clinicTasks, 'z');
+
+console.assert(
+  clinicMissing.every((task, index) => task === clinicTasks[index]),
+  'FAIL: Missing ID changed a task'
+);
+
+// Empty array
+const clinicEmpty = completeClinicTask([], 'a');
+
+console.assert(
+  clinicEmpty.length === 0,
+  'FAIL: Empty array did not remain empty'
+);
+
+console.log('Application Clinic: All checks completed.');
