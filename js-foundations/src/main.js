@@ -128,3 +128,94 @@ console.log(
     ? ticketQuantity * 12
     : 'Enter a positive whole number'
 );
+// Week 10 - Lesson 1: Functions
+
+function estimateCost(hours, rate) {
+  if (!Number.isFinite(hours) || !Number.isFinite(rate) || hours < 0 || rate < 0) {
+    throw new Error('Hours and rate must be nonnegative numbers.');
+  }
+
+  return hours * rate;
+}
+
+console.log(estimateCost(4, 18));
+console.log(estimateCost(5, 20));
+console.log(estimateCost(2, 15));
+// Week 10 - Lesson 1: Return vs console.log
+
+function displayCost(hours, rate) {
+  console.log(hours * rate);
+}
+
+const displayedCost = displayCost(4, 18);
+console.log('Returned value:', displayedCost);
+const doubledCost = estimateCost(4, 18) * 2;
+console.log('Doubled cost:', doubledCost);
+// Week 10 - Lesson 1: Guided functions
+
+function normalizeTitle(value) {
+  if (typeof value !== 'string') {
+    throw new Error('Title must be text.');
+  }
+
+  return value.trim();
+}
+
+console.log(normalizeTitle('  Life With a Malamute  '));
+console.log(normalizeTitle('  Meet Elsa  '));
+
+function calculateTotal(prices) {
+  if (!Array.isArray(prices) || !prices.every(price => Number.isFinite(price) && price >= 0)) {
+    throw new Error('Prices must be nonnegative numbers.');
+  }
+
+  return prices.reduce((total, price) => total + price, 0);
+}
+
+console.log(calculateTotal([12, 8, 5]));
+console.log(calculateTotal([10, 20]));
+// Week 10 - Lesson 1: Independent kata
+
+function calculateLabor(hours, rate) {
+  if (!Number.isFinite(hours) || !Number.isFinite(rate) || hours < 0 || rate < 0) {
+    throw new Error('Invalid hours or rate.');
+  }
+  return hours * rate;
+}
+
+function calculateFee(fee) {
+  if (!Number.isFinite(fee) || fee < 0) {
+    throw new Error('Invalid fee.');
+  }
+  return fee;
+}
+
+function calculateSubtotal(labor, fee) {
+  return labor + fee;
+}
+
+function calculateQuote(hours, rate, fee) {
+  const labor = calculateLabor(hours, rate);
+  const validFee = calculateFee(fee);
+  return calculateSubtotal(labor, validFee);
+}
+
+// Two example calls for each function
+console.log(calculateLabor(4, 18));
+console.log(calculateLabor(5, 20));
+
+console.log(calculateFee(5));
+console.log(calculateFee(10));
+
+console.log(calculateSubtotal(72, 5));
+console.log(calculateSubtotal(100, 10));
+
+console.log(calculateQuote(4, 18, 5));
+console.log(calculateQuote(5, 20, 10));
+// Week 10 - Lesson 1: Debugging challenge
+
+const brokenMakeTask = title => { title };
+console.log('Broken:', brokenMakeTask('Feed Elsa'));
+
+const makeTask = title => ({ title });
+console.log('Fixed:', makeTask('Feed Elsa'));
