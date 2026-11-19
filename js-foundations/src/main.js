@@ -219,3 +219,143 @@ console.log('Broken:', brokenMakeTask('Feed Elsa'));
 
 const makeTask = title => ({ title });
 console.log('Fixed:', makeTask('Feed Elsa'));
+
+// Week 10 - Lesson 2: Arrays and objects
+
+const tasks = [
+  { id: 'a', title: 'Feed Elsa', complete: true },
+  { id: 'b', title: 'Walk Elsa', complete: false },
+  { id: 'c', title: 'Brush Elsa', complete: false },
+];
+
+// Find incomplete tasks
+const openTasks = tasks.filter(task => !task.complete);
+
+// Get their titles
+const openTitles = openTasks.map(task => task.title);
+
+console.log('Incomplete tasks:', openTitles);
+
+// Find one task by its ID
+const foundTask = tasks.find(task => task.id === 'b');
+console.log('Found task:', foundTask);
+
+// Try finding a task that doesn't exist
+const missingTask = tasks.find(task => task.id === 'z');
+console.log('Missing task:', missingTask);
+
+// Week 10 - Lesson 2: Immutable task updates
+
+function completeTask(taskList, id) {
+  return taskList.map(task =>
+    task.id === id
+      ? { ...task, complete: true }
+      : task
+  );
+}
+
+const updatedTasks = completeTask(tasks, 'b');
+
+console.log('Original tasks:', tasks);
+console.log('Updated tasks:', updatedTasks);
+
+// Confirm the original was not changed
+console.log('Original walk:', tasks.find(task => task.id === 'b'));
+console.log('Updated walk:', updatedTasks.find(task => task.id === 'b'));
+
+// Try an ID that does not exist
+console.log('Missing ID update:', completeTask(tasks, 'z'));
+
+// Try an empty array
+console.log('Empty array update:', completeTask([], 'b'));
+
+// Week 10 - Lesson 2: Friday task filtering
+
+const weeklyTasks = [
+  { id: 'a', title: 'Feed Elsa', complete: true, dueDay: 'Friday' },
+  { id: 'b', title: 'Walk Elsa', complete: false, dueDay: 'Friday' },
+  { id: 'c', title: 'Brush Elsa', complete: false, dueDay: 'Monday' },
+  { id: 'd', title: 'Wash Elsa bedding', complete: false, dueDay: 'Friday' },
+];
+
+function getFridayTasks(taskList) {
+  return taskList
+    .filter(task => !task.complete && task.dueDay === 'Friday')
+    .map(task => task.title);
+}
+
+console.log('Friday tasks:', getFridayTasks(weeklyTasks));
+console.log('Empty list:', getFridayTasks([]));
+console.log('No matches:', getFridayTasks([
+  { id: 'e', title: 'Buy treats', complete: true, dueDay: 'Friday' }
+]));
+// Week 10 - Lesson 2: Task toolkit
+
+function addTask(taskList, newTask) {
+  return [...taskList, { ...newTask }];
+}
+
+function findTask(taskList, id) {
+  return taskList.find(task => task.id === id);
+}
+
+function removeTask(taskList, id) {
+  return taskList.filter(task => task.id !== id);
+}
+
+function summarizeTasks(taskList) {
+  let completed = 0;
+  let incomplete = 0;
+
+  for (const task of taskList) {
+    if (task.complete) {
+      completed += 1;
+    } else {
+      incomplete += 1;
+    }
+  }
+
+  return { completed, incomplete };
+}
+
+// Try each operation
+console.log('Added task:', addTask(weeklyTasks, {
+  id: 'e',
+  title: 'Buy Elsa treats',
+  complete: false,
+  dueDay: 'Saturday'
+}));
+
+console.log('Found task:', findTask(weeklyTasks, 'b'));
+console.log('Missing task:', findTask(weeklyTasks, 'z'));
+
+console.log('Removed task:', removeTask(weeklyTasks, 'c'));
+
+console.log('Task summary:', summarizeTasks(weeklyTasks));
+console.log('Empty summary:', summarizeTasks([]));
+
+// Confirm original data is preserved
+console.log('Original task count:', weeklyTasks.length);
+
+// Week 10 - Lesson 2: Debugging challenge
+
+const debugTasks = [
+  { id: 'a', title: 'Feed Elsa', done: false },
+  { id: 'b', title: 'Walk Elsa', done: false },
+];
+
+const debugId = 'b';
+
+const fixedTasks = debugTasks.map(task =>
+  task.id === debugId
+    ? { ...task, done: true }
+    : task
+);
+
+console.log('Original debug tasks:', debugTasks);
+console.log('Fixed debug tasks:', fixedTasks);
+
+console.log(
+  'Original unchanged:',
+  debugTasks[1].done === false
+);
