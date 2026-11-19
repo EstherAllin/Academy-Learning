@@ -110,3 +110,5 @@ I found working with functions and collections challenging, especially keeping t
 The debugging exercise helped because I could actually see how one mistake affected multiple results.
 
 This project is still a learning exercise, but the task functions now work independently of the website.
+
+**Week 10 commit:** `6dee254`
